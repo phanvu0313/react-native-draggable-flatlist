@@ -312,7 +312,7 @@ function DraggableFlatListInner<T>(props: DraggableFlatListProps<T>) {
       // Turning this into a worklet causes timing issues. We want it to run
       // just after the finger lifts.
       runOnJS(onContainerTouchEnd)();
-    }
+    })
     .onTouchesCancelled(()=>{
       runOnJS(onContainerTouchEnd)();
     });
